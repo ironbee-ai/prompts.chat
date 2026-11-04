@@ -1283,10 +1283,49 @@
     "discover": "Descubrir",
     "emptyTitle": "Tu colección está vacía",
     "emptyDescription": "Guarda prompts en tu colección para acceder rápidamente",
+    "emptyListTitle": "This list is empty",
+    "emptyListDescription": "Add prompts from browse or save them with the bookmark button",
     "addToCollection": "Añadir a Colección",
     "inCollection": "En Colección",
     "added": "Añadido a la colección",
-    "removed": "Eliminado de la colección"
+    "removed": "Eliminado de la colección",
+    "listsTitle": "Lists",
+    "newList": "New list",
+    "createList": "Create list",
+    "editList": "Edit list",
+    "listName": "List name",
+    "listNamePlaceholder": "e.g. Writing prompts",
+    "listDescription": "Description (optional)",
+    "listDescriptionPlaceholder": "What is this list for?",
+    "publicList": "Public list",
+    "publicListHint": "Anyone with the link can view this list",
+    "publicUrl": "Public link",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied",
+    "copyLinkFailed": "Could not copy link",
+    "viewPublic": "View public page",
+    "listActions": "List actions",
+    "exportJson": "Export JSON",
+    "exportMarkdown": "Export Markdown",
+    "exportError": "Export failed",
+    "createSuccess": "List created",
+    "createError": "Could not create list",
+    "updateSuccess": "List updated",
+    "updateError": "Could not update list",
+    "deleteList": "Delete list",
+    "deleteListConfirm": "Delete this list? Saved prompts in other lists are not affected.",
+    "deleteSuccess": "List deleted",
+    "deleteError": "Could not delete list",
+    "create": "Create",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "public": {
+      "badge": "Public list",
+      "promptCount": "{count, plural, one {# prompt} other {# prompts}}",
+      "by": "Curated by",
+      "empty": "This public list has no visible prompts yet."
+    }
   },
   "discovery": {
     "trending": "En tendencia ahora",
@@ -2774,6 +2813,10 @@
       "title": "Equipos de bots de IA: agentes que se pasan el trabajo",
       "description": "Explora equipos de bots de agentes de IA que se pasan el trabajo entre sí, consulta cada entrega e instala un equipo completo en OpenClaw, Hermes Agent, Grok Bot y más en un solo paso.",
       "heading": "Equipos de bots"
+    },
+    "collectionList": {
+      "title": "{name} by {owner}",
+      "description": "Public prompt list \"{name}\" curated by {owner} on prompts.chat."
     }
   },
   "apiDocs": {
