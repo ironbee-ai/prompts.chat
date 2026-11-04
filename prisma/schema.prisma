@@ -47,6 +47,7 @@ model User {
   notifications              Notification[]         @relation("NotificationRecipient")
   notificationsActed         Notification[]         @relation("NotificationActor")
   collections                Collection[]
+  collectionLists            CollectionList[]
   userPromptExamples         UserPromptExample[]
   botTeams                   BotTeam[]
   botTeamVotes               BotTeamVote[]
@@ -286,15 +287,38 @@ model PinnedPrompt {
   @@map("pinned_prompts")
 }
 
+model CollectionList {
+  id          String       @id @default(cuid())
+  userId      String
+  name        String
+  slug        String
+  description String?      @db.VarChar(500)
+  isPublic    Boolean      @default(false)
+  isDefault   Boolean      @default(false)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  items       Collection[]
+
+  @@unique([userId, slug])
+  @@index([userId])
+  @@index([userId, isDefault])
+  @@map("collection_lists")
+}
+
 model Collection {
+  listId    String
   userId    String
   promptId  String
-  createdAt DateTime @default(now())
-  prompt    Prompt   @relation(fields: [promptId], references: [id], onDelete: Cascade)
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  order     Int            @default(0)
+  createdAt DateTime       @default(now())
+  list      CollectionList @relation(fields: [listId], references: [id], onDelete: Cascade)
+  prompt    Prompt         @relation(fields: [promptId], references: [id], onDelete: Cascade)
+  user      User           @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@id([userId, promptId])
+  @@id([listId, promptId])
   @@index([userId])
+  @@index([userId, promptId])
   @@index([promptId])
   @@map("collections")
 }

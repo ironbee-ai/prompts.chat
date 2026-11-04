@@ -231,15 +231,13 @@ export default async function PromptPage({ params }: PromptPageProps) {
 
   // Check if user has this prompt in their collection
   const userCollection = session?.user
-    ? await db.collection.findUnique({
+    ? (await db.collection.count({
         where: {
-          userId_promptId: {
-            userId: session.user.id,
-            promptId: id,
-          },
+          userId: session.user.id,
+          promptId: id,
         },
-      })
-    : null;
+      })) > 0
+    : false;
 
   // Fetch related prompts (via PromptConnection with label "related")
   const relatedConnections = await db.promptConnection.findMany({

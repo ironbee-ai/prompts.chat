@@ -1283,10 +1283,49 @@
     "discover": "발견",
     "emptyTitle": "컬렉션이 비어있습니다",
     "emptyDescription": "빠른 접근을 위해 프롬프트를 컬렉션에 저장하세요",
+    "emptyListTitle": "This list is empty",
+    "emptyListDescription": "Add prompts from browse or save them with the bookmark button",
     "addToCollection": "컬렉션에 추가",
     "inCollection": "컬렉션에 있음",
     "added": "컬렉션에 추가됨",
-    "removed": "컬렉션에서 제거됨"
+    "removed": "컬렉션에서 제거됨",
+    "listsTitle": "Lists",
+    "newList": "New list",
+    "createList": "Create list",
+    "editList": "Edit list",
+    "listName": "List name",
+    "listNamePlaceholder": "e.g. Writing prompts",
+    "listDescription": "Description (optional)",
+    "listDescriptionPlaceholder": "What is this list for?",
+    "publicList": "Public list",
+    "publicListHint": "Anyone with the link can view this list",
+    "publicUrl": "Public link",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied",
+    "copyLinkFailed": "Could not copy link",
+    "viewPublic": "View public page",
+    "listActions": "List actions",
+    "exportJson": "Export JSON",
+    "exportMarkdown": "Export Markdown",
+    "exportError": "Export failed",
+    "createSuccess": "List created",
+    "createError": "Could not create list",
+    "updateSuccess": "List updated",
+    "updateError": "Could not update list",
+    "deleteList": "Delete list",
+    "deleteListConfirm": "Delete this list? Saved prompts in other lists are not affected.",
+    "deleteSuccess": "List deleted",
+    "deleteError": "Could not delete list",
+    "create": "Create",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "public": {
+      "badge": "Public list",
+      "promptCount": "{count, plural, one {# prompt} other {# prompts}}",
+      "by": "Curated by",
+      "empty": "This public list has no visible prompts yet."
+    }
   },
   "discovery": {
     "trending": "지금 트렌딩",
@@ -2759,6 +2798,10 @@
       "title": "AI 봇 팀: 작업을 서로 넘겨주는 에이전트",
       "description": "서로 작업을 넘겨주는 AI 에이전트 봇 팀을 둘러보고, 각 인계를 확인하고, 팀 전체를 OpenClaw, Hermes Agent, Grok Bot 등에 한 번에 설치하세요.",
       "heading": "봇 팀"
+    },
+    "collectionList": {
+      "title": "{name} by {owner}",
+      "description": "Public prompt list \"{name}\" curated by {owner} on prompts.chat."
     }
   },
   "apiDocs": {
